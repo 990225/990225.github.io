@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hyunjong KIM" />
+    <title>Hyunjong's Portfolio</title>
+    <link
+      rel="shortcut icon"
+      href="./images/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./js/scroll.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+  </head>
+  <body>
+    <!-- 프로필 -->
+    <section id="profile" class="topLine">
+      <h1 class="title">PROFILE</h1>
+
+      <div class="container">
+        <div class="profile__bg">
+          <div class="horizontalLine">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="horizontalLine">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="horizontalLine">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="horizontalLine">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="horizontalLine">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="verticalLine-top"></div>
+          <div class="verticalLine-bottom"></div>
+        </div>
+
+        <article id="myInfo">
+          <img
+            class="profile__icon"
+            src="./images/profile/myInfo.png"
+            alt="My Info"
+          />
+          <h2 class="article__title">MY INFO</h2>
+          <div class="underline"></div>
+          <ul class="profile__items">
+            <li class="profile__item">김현종</li>
+            <li class="profile__item">1999. 2. 25.</li>
+            <li class="profile__item">일산고등학교</li>
+            <li class="profile__item">멀티미디어 디자인과 졸업</li>
+          </ul>
+        </article>
+        <article id="experience">
+          <img
+            class="profile__icon"
+            src="./images/profile/experience.png"
+            alt="Experience"
+          />
+          <h2 class="article__title">EXPERIENCE</h2>
+          <div class="underline"></div>
+          <ul class="profile__items">
+            <li class="profile__item">2016. 9. ~ 2018. 4.</li>
+            <li class="profile__item">AK반도체 / SMT OP</li>
+          </ul>
+        </article>
+        <article id="skills">
+          <img
+            class="profile__icon"
+            src="./images/profile/skills.png"
+            alt="Skills"
+          />
+          <h2 class="article__title">SKILLS</h2>
+          <div class="underline"></div>
+          <ul class="profile__items">
+            <li class="profile__item">HTML5</li>
+            <li class="profile__item">CSS3</li>
+            <li class="profile__item">JAVASCRIPT</li>
+            <li class="profile__item">PHOTOSHOP</li>
+          </ul>
+        </article>
+        <article id="certificate">
+          <img
+            class="profile__icon"
+            src="./images/profile/certificate.png"
+            alt="Certificate"
+          />
+          <h2 class="article__title">CERTIFICATE</h2>
+          <div class="underline"></div>
+          <ul class="profile__items">
+            <li class="profile__item">웹디자인 기능사</li>
+            <li class="profile__item">ITQ 한글엑셀 A</li>
+            <li class="profile__item">ITQ 한글파워포인트 A</li>
+            <li class="profile__item">ITQ 아래한글 A</li>
+            <li class="profile__item">GTQ 1급</li>
+            <li class="profile__item">자동차 운전면허 1종 보통</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 프로젝트 -->
+    <section id="project" class="topLine">
+      <h1 class="title">PROJECT</h1>
+
+      <div class="container">
+        <article class="project__item active">
+          <img
+            class="project__img"
+            src="./images/project/portfolio.png"
+            alt="Portfolio"
+          />
+        </article>
+
+        <button id="0" class="project__btn">자세히 보기</button>
+
+        <button class="project__prev">◀</button>
+        <button class="project__next">▶</button>
+      </div>
+    </section>
+
+    <!-- 모달 -->
+    <section id="modal" class="none">
+      <div class="modal__bg"></div>
+
+      <div class="container topLine">
+        <article class="modal__item">
+          <h1 class="title">Portfolio</h1>
+          <p class="modal__description">
+            포트폴리오의 생동감을 위해 CSS의 키프레임을 활용하여 약간의
+            애니메이션 효과를 주었습니다. 프로젝트 부분은 슬라이더 기능을
+            사용하여 한 프로젝트씩 넘기면서 볼 수 있도록 하였고, PC, 태블릿,
+            모바일등 서로 다른 기기에서도 원활히 볼 수 있도록 반응형으로
+            제작하였습니다.
+          </p>
+          <img
+            class="modal__img"
+            src="images/modal/portfolio-layout.png"
+            alt="Portfolio layout"
+          />
+        </article>
+
+        <div class="modal__btn">
+          <button class="modal__code">깃허브</button>
+          <button class="modal__site">사이트로 이동</button>
+          <button class="modal__close">닫기</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

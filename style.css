@@ -1,0 +1,441 @@
+@font-face {
+  font-family: recipeKorea;
+  src: url(./fonts/recipeKorea.ttf);
+}
+
+@font-face {
+  font-family: namooGulrim;
+  src: url(./fonts/210namooGulrimR.ttf);
+}
+
+html,
+body,
+h1,
+h2,
+p,
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: recipeKorea, namooGulrim, sans-serif;
+  text-align: center;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.topLine {
+  border-top: solid 10px #ffbc42;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 9rem 0 6rem;
+  font-size: 5rem;
+  color: #2f2f2f;
+}
+
+.article__title {
+  margin-bottom: 2rem;
+  font-size: 4.1rem;
+  color: #303030;
+}
+
+/* 프로필 */
+#profile {
+  padding-bottom: 9rem;
+}
+
+#profile > .container {
+  flex-wrap: wrap;
+}
+
+#profile article {
+  width: 50%;
+  min-width: 280px;
+  margin: 0 auto;
+}
+
+.profile__icon {
+  height: 76px;
+  margin: 7rem 0 3.7rem;
+}
+
+.profile__items {
+  margin: 3.3rem 0 6.2rem;
+}
+
+.profile__item {
+  margin-bottom: 1.7rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.03rem;
+  color: #313131;
+  list-style: none;
+}
+
+/* 프로필 배경 */
+.underline {
+  height: 2px;
+  margin: 0 auto;
+  background-color: #363636;
+}
+
+#myInfo > .underline {
+  width: 16rem;
+}
+
+#experience > .underline {
+  width: 25rem;
+}
+
+#skills > .underline {
+  width: 11.5rem;
+}
+
+#certificate > .underline {
+  width: 22.5rem;
+}
+
+.profile__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+}
+
+.horizontalLine {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.horizontalLine:nth-child(2) {
+  top: calc(50% - 5rem);
+}
+
+.horizontalLine:nth-child(5) {
+  bottom: 0;
+}
+
+.horizontalLine > span {
+  position: absolute;
+  height: 2px;
+  background-color: #363636;
+}
+
+.horizontalLine > span:nth-child(1) {
+  width: calc(50% - 50px);
+  left: 25px;
+}
+
+.horizontalLine > span:nth-child(2) {
+  width: 16px;
+  transform: rotate(45deg);
+}
+
+.horizontalLine > span:nth-child(3) {
+  width: 16px;
+  transform: rotate(135deg);
+}
+
+.horizontalLine > span:nth-child(4) {
+  width: calc(50% - 50px);
+  right: 25px;
+}
+
+.verticalLine-top {
+  width: 2px;
+  height: calc(50% - 5rem - 50px);
+  margin: 26px auto 0;
+  background-color: #363636;
+}
+
+.verticalLine-bottom {
+  width: 2px;
+  height: calc(50% + 5rem - 50px);
+  margin: 50px auto 0;
+  background-color: #363636;
+}
+
+/* 프로필 애니메이션 */
+#profile > .title {
+  opacity: 0;
+  animation: 0.4s ease-out 0.1s forwards profile;
+}
+
+#profile > .container > div {
+  opacity: 0;
+  animation: 0.4s ease-out 0.3s forwards profile;
+}
+
+.underline {
+  opacity: 0;
+  animation: 0.4s ease-out 0.5s forwards profile;
+}
+
+.profile__icon {
+  opacity: 0;
+  animation: 0.4s ease-out 0.7s forwards profile;
+}
+
+.article__title {
+  opacity: 0;
+  animation: 0.4s ease-out 0.9s forwards profile;
+}
+
+.profile__items {
+  opacity: 0;
+  animation: 0.4s ease-out 1.1s forwards profile;
+}
+
+@keyframes profile {
+  0% {
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 프로젝트 */
+#project {
+  padding-bottom: 9rem;
+  background-color: #f4f8f9;
+}
+
+#project > .container {
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+
+.project__item {
+  display: none;
+  padding: 0 8rem;
+}
+
+#project > .container > .active {
+  display: inline-block;
+}
+
+.project__img {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 4rem;
+}
+
+.project__btn {
+  padding: 2.4rem 3.4rem 1.46rem;
+  font-family: recipeKorea, namooGulrim, sans-serif;
+  font-size: 2.5rem;
+  color: #303030;
+  background-color: #ffbc42;
+  border-radius: 35px;
+  box-shadow: 0 1px 3px #888888;
+}
+
+.project__prev,
+.project__next {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding-bottom: 12rem;
+  font-size: 7rem;
+  color: #202020;
+  background-color: transparent;
+}
+
+.project__prev {
+  left: 5px;
+}
+
+.project__next {
+  right: 5px;
+}
+
+/* 모달 */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.none {
+  display: none;
+}
+
+.modal__bg {
+  width: 100%;
+  height: 100%;
+  background-color: #515151;
+}
+
+#modal > .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background-color: #f4f8f9;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #333333;
+}
+
+.modal__item {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 9rem);
+  margin: 10px;
+  overflow-y: auto;
+}
+
+.modal__item > .title {
+  margin: 6rem 10px 4rem 0;
+}
+
+#modal > .container > .active {
+  display: flex;
+}
+
+.modal__description {
+  width: 90%;
+  margin: 0 10px 4rem 0;
+  font-family: namooGulrim, recipeKorea, sans-serif;
+  font-size: 3rem;
+  line-height: 5rem;
+  color: #2a2a2a;
+  text-align: justify;
+}
+
+.modal__img {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 10px 4rem 0;
+  box-shadow: 0 0 10px #777777;
+}
+
+.modal__btn {
+  position: absolute;
+  top: calc(100% - 8rem);
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.modal__btn button {
+  margin: 0 5px;
+  padding: 1.8rem 2.6rem 12px;
+  font-family: recipeKorea, namooGulrim, sans-serif;
+  font-size: 2.2rem;
+  color: #303030;
+  background-color: #ffbc42;
+  border-radius: 35px;
+  box-shadow: 0 1px 3px #888888;
+}
+
+/* 모달 애니메이션 */
+#modal > .container {
+  animation: 0.3s ease-in-out modalOpen;
+}
+
+@keyframes modalOpen {
+  0% {
+    transform: translate(-50%, -50%) scale(0.98);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  html {
+    font-size: 9px;
+  }
+
+  /* 모달 */
+  .modal__btn button {
+    padding-bottom: 7.8px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  html {
+    font-size: 7px;
+  }
+
+  /* 프로젝트 */
+  .project__prev,
+  .project__next {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* 프로필 */
+  #profile > .container {
+    flex-direction: column;
+  }
+
+  /* 프로필 배경 */
+  .horizontalLine:nth-child(2) {
+    top: 25%;
+  }
+
+  .horizontalLine:nth-child(3) {
+    top: calc(50% - 10rem);
+  }
+
+  .horizontalLine:nth-child(4) {
+    top: calc(75% - 10rem);
+  }
+
+  .verticalLine-top,
+  .verticalLine-bottom {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 6px;
+  }
+
+  /* 모달 */
+  .modal__btn button {
+    padding-bottom: 6px;
+  }
+}
