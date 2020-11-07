@@ -23,6 +23,9 @@ modalCodeBtn.addEventListener("click", () => {
     case "0":
       window.open("https://github.com/990225/990225.github.io");
       break;
+    case "1":
+      window.open("https://github.com/990225/toDoList");
+      break;
   }
 });
 
@@ -30,6 +33,9 @@ modalSiteBtn.addEventListener("click", () => {
   switch (modalIndex) {
     case "0":
       window.open("https://990225.github.io/");
+      break;
+    case "1":
+      window.open("https://990225.github.io/toDoList/");
       break;
   }
 });
