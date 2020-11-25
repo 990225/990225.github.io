@@ -337,6 +337,10 @@ button {
   text-align: justify;
 }
 
+.modal__item:nth-child(3) > .modal__description {
+  text-align: center;
+}
+
 .modal__img {
   width: 90%;
   max-width: 1000px;
