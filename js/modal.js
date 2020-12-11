@@ -20,6 +20,7 @@ modalOpenBtn.addEventListener("click", () => {
 
 modalCodeBtn.addEventListener("click", () => {
   switch (modalIndex) {
+    default:
     case "0":
       window.open("https://github.com/990225/990225.github.io");
       break;
@@ -29,11 +30,15 @@ modalCodeBtn.addEventListener("click", () => {
     case "2":
       window.open("https://github.com/990225/co_and_co_website");
       break;
+    case "3":
+      window.open("https://github.com/990225/boop_website");
+      break;
   }
 });
 
 modalSiteBtn.addEventListener("click", () => {
   switch (modalIndex) {
+    default:
     case "0":
       window.open("https://990225.github.io/");
       break;
@@ -42,6 +47,9 @@ modalSiteBtn.addEventListener("click", () => {
       break;
     case "2":
       window.open("https://990225.github.io/co_and_co_website/");
+      break;
+    case "3":
+      window.open("https://990225.github.io/boop_website/");
       break;
   }
 });

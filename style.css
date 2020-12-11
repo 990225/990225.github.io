@@ -337,7 +337,8 @@ button {
   text-align: justify;
 }
 
-.modal__item:nth-child(3) > .modal__description {
+.modal__item:nth-child(3) > .modal__description,
+.modal__item:nth-child(4) > .modal__description {
   text-align: center;
 }
 
